@@ -1,0 +1,14 @@
+HISTORYVERSE 360 — Melaka Maritime Quest bug fix
+Tarikh: 21 September 2026
+
+Dibaiki:
+1. Dinar kini menggunakan state permainan sebenar dan bertambah apabila kutipan diambil / cabaran betul.
+2. Kargo kini disimpan dalam inventori sebenar (maksimum 5) dan paparan 0/5 hingga 5/5 dikemas kini serta-merta.
+3. Panel MISI SEMASA kini dinamik dan bergerak mengikut kemajuan.
+4. Panel CABARAN kini interaktif pada peta, bukan sekadar teks yang tertanam dalam gambar latar.
+5. HUD Nyawa / Dinar / Kargo / Markah kini ialah elemen HTML hidup yang menutup nombor dekoratif dalam map-bg.png.
+6. Ganjaran tidak boleh dikutip berulang kali di lokasi yang sama.
+7. Jawapan salah mengurangkan nyawa; jawapan betul memberi +30 Dinar dan +20 markah pada kali pertama lokasi dikuasai.
+
+Punca utama bug asal:
+map-bg.png mengandungi HUD, MISI SEMASA, CABARAN dan KARGO sebagai sebahagian daripada imej. Kod lama hanya mengemas kini HUD luaran, jadi nombor/panel di atas peta kelihatan tidak berubah.

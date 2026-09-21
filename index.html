@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123d50">
+  <meta name="description" content="Kemudi kapal dan jelajah laluan perdagangan Kesultanan Melayu Melaka.">
+  <title>Melaka Maritime Quest • HISTORYVERSE 360</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div><small>SEJARAH TINGKATAN 2 · BAB 5</small><strong>Melaka Maritime Quest</strong></div>
+    <div class="top-actions"><span id="hud">❤️ 3 &nbsp; 🪙 0 &nbsp; 📦 0/5 &nbsp; ⭐ 0</span><button id="fullscreen" type="button">⛶ Skrin penuh</button></div>
+  </header>
+
+  <main>
+    <p class="mobile-note">Putar telefon secara melintang untuk paparan paling luas.</p>
+    <section class="stage" id="stage" aria-label="Peta interaktif laluan perdagangan Melaka">
+      <img class="map-bg" src="map-bg.png" alt="Peta perdagangan Melaka dengan laluan India, China, Arab Parsi dan Kepulauan Melayu">
+      <img id="playerShip" class="player-ship" src="kapal-melaka.png" alt="Kapal dagang Melaka">
+
+      <div class="live-hud" aria-label="Statistik permainan">
+        <div><span>♥</span><strong id="lifeLive">3</strong><small>Nyawa</small></div>
+        <div><span>◉</span><strong id="coinLive">0</strong><small>Dinar</small></div>
+        <div><span>▣</span><strong id="cargoHudLive">0/5</strong><small>Kargo</small></div>
+        <div><span>★</span><strong id="scoreLive">0</strong><small>Markah</small></div>
+      </div>
+
+      <aside class="live-mission" aria-live="polite">
+        <div class="mission-heading">MISI SEMASA</div>
+        <h2 id="missionTitle">1. CARI PELABUHAN MELAKA</h2>
+        <p id="missionInstruction">Kawal kapal dan cari Selat Melaka.</p>
+        <div class="challenge-heading">▣ CABARAN</div>
+        <small id="challengePort">Pilih sebuah pelabuhan</small>
+        <h3 id="questionText">Tekan penanda pelabuhan pada peta. Soalan cabaran akan muncul di sini.</h3>
+        <div class="answers" id="answers"></div>
+        <p class="feedback" id="feedback" aria-live="polite"></p>
+      </aside>
+
+      <section class="live-cargo" aria-label="Kargo anda">
+        <div class="cargo-title"><strong>KARGO ANDA</strong><span id="cargoLiveCount">0/5</span></div>
+        <div id="cargoSlots" class="cargo-slots"></div>
+      </section>
+
+      <div id="pickupLayer" aria-label="Kutipan Dinar dan kargo"></div>
+
+      <button class="hotspot" style="--x:7.4%;--y:21.2%" data-port="gujerat" aria-label="Teroka Gujerat"><span>Gujerat</span></button>
+      <button class="hotspot" style="--x:15.7%;--y:28.5%" data-port="coromandel" aria-label="Teroka Coromandel"><span>Coromandel</span></button>
+      <button class="hotspot" style="--x:53.8%;--y:19.1%" data-port="china" aria-label="Teroka China"><span>China</span></button>
+      <button class="hotspot" style="--x:43.8%;--y:31.7%" data-port="champa" aria-label="Teroka Champa"><span>Champa</span></button>
+      <button class="hotspot melaka" style="--x:40.2%;--y:51.3%" data-port="melaka" aria-label="Teroka Melaka"><span>Melaka</span></button>
+      <button class="hotspot" style="--x:31.8%;--y:55.6%" data-port="sumatera" aria-label="Teroka Sumatera"><span>Sumatera</span></button>
+      <button class="hotspot" style="--x:55.5%;--y:47.5%" data-port="borneo" aria-label="Teroka Borneo"><span>Borneo</span></button>
+      <button class="hotspot" style="--x:48.3%;--y:62.2%" data-port="jawa" aria-label="Teroka Jawa"><span>Jawa</span></button>
+      <button class="hotspot" style="--x:68.3%;--y:57.1%" data-port="maluku" aria-label="Teroka Maluku"><span>Maluku</span></button>
+
+      <div class="dpad" aria-label="Kawalan kapal">
+        <button data-move="up" aria-label="Gerak ke atas">▲</button>
+        <button data-move="left" aria-label="Gerak ke kiri">◀</button>
+        <button id="autoSail" aria-pressed="false">⚓</button>
+        <button data-move="right" aria-label="Gerak ke kanan">▶</button>
+        <button data-move="down" aria-label="Gerak ke bawah">▼</button>
+      </div>
+      <button class="auto-label" id="autoLabel" type="button">↻ Layar Automatik</button>
+      <p class="status" id="status" aria-live="polite">Kemudi kapal atau tekan penanda pelabuhan.</p>
+    </section>
+
+    <section class="mission-strip">
+      <div><small>KEMAJUAN MISI</small><strong>Perdagangan Kesultanan Melayu Melaka</strong></div>
+      <div class="progress"><span id="progressBar"></span></div>
+      <span id="visitedText">0/5 destinasi dikuasai</span>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b4971">
+  <title>2.2 Garis Masa Zaman Air Batu</title>
+  <style>
+    :root{--navy:#073b5c;--blue:#168fc5;--ice:#dff7ff;--paper:#fffdf8;--ink:#153346;--gold:#ffc85c;--good:#14815d;--bad:#bc4250}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 8%,#fff 0 7%,transparent 30%),linear-gradient(160deg,#dff8ff,#9bd7ef 48%,#e8f8f6);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+    button{font:inherit}.shell{margin:auto;max-width:1100px;padding:18px}.hero{background:linear-gradient(135deg,#063b5c,#087ba4 68%,#22aeb4);border:3px solid #fff;border-radius:28px;box-shadow:0 18px 45px #07465b35;color:#fff;overflow:hidden;padding:clamp(24px,5vw,52px);position:relative;text-align:center}
+    .hero:after{content:"❄  ❅  ❆";font-size:clamp(42px,8vw,90px);opacity:.13;position:absolute;right:3%;top:4%;transform:rotate(-10deg)}
+    .tag{background:#fff2bd;border-radius:99px;color:#684a00;display:inline-block;font-size:.8rem;font-weight:900;letter-spacing:.08em;padding:7px 13px;text-transform:uppercase}.hero h1{font:900 clamp(2rem,7vw,4.5rem)/1.02 Georgia,serif;margin:15px auto 8px;max-width:850px}.hero p{font-size:clamp(1rem,2.4vw,1.25rem);margin:0 auto;max-width:730px}
+    .guide{align-items:center;background:#ffffffd9;border:1px solid #fff;border-radius:18px;display:flex;gap:12px;margin:18px 0;padding:14px 17px}.guide span{font-size:1.8rem}.guide strong{display:block}.guide small{color:#4d6d7b}
+    .timeline{display:grid;gap:12px;grid-template-columns:repeat(4,1fr);margin:20px 0;position:relative}.timeline:before{background:linear-gradient(90deg,#ff9f68,#ffcb57,#76c5e8,#56caa2);content:"";height:8px;left:8%;position:absolute;right:8%;top:39px;z-index:0}
+    .era{background:var(--paper);border:2px solid #fff;border-radius:22px;box-shadow:0 10px 25px #285d7130;color:var(--ink);cursor:pointer;min-height:155px;padding:18px 12px;position:relative;text-align:center;transition:.2s;z-index:1}.era:hover,.era:focus-visible{transform:translateY(-5px);outline:4px solid #ffffff99}.era.active{border-color:var(--gold);box-shadow:0 13px 30px #976d1b42;transform:translateY(-5px)}.era .icon{display:grid;font-size:2.5rem;height:58px;place-items:center}.era strong{display:block;font:900 1.25rem Georgia,serif}.era small{color:#527181;display:block;font-size:.78rem;font-weight:800;margin-top:5px}
+    .detail{align-items:center;background:#fff;border:2px solid #fff;border-radius:26px;box-shadow:0 18px 40px #285d7130;display:grid;gap:22px;grid-template-columns:180px 1fr;margin-top:18px;min-height:270px;padding:clamp(20px,4vw,36px)}.detail-visual{align-content:center;background:linear-gradient(145deg,#e7faff,#a9e3f6);border-radius:22px;display:grid;justify-items:center;min-height:205px;padding:16px;text-align:center}.detail-visual span{font-size:5rem}.detail-visual strong{color:var(--navy);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}.detail h2{color:var(--navy);font:900 clamp(1.65rem,4vw,2.5rem)/1.1 Georgia,serif;margin:0 0 8px}.period{background:#e9f7fb;border-radius:99px;color:#096186;display:inline-block;font-size:.82rem;font-weight:900;margin-bottom:13px;padding:6px 11px}.facts{display:grid;gap:9px;grid-template-columns:repeat(2,1fr);margin:0;padding:0}.facts li{background:#f3fafc;border-left:5px solid var(--blue);border-radius:12px;list-style:none;padding:11px 13px}
+    .check{background:#073b5c;border-radius:26px;color:#fff;margin:22px 0;padding:clamp(20px,4vw,34px)}.check h2{font:900 clamp(1.5rem,4vw,2.2rem) Georgia,serif;margin:0 0 6px}.answers{display:grid;gap:10px;grid-template-columns:repeat(2,1fr);margin-top:16px}.answer{background:#fff;border:2px solid transparent;border-radius:14px;color:var(--ink);cursor:pointer;font-weight:800;padding:13px;text-align:left}.answer:hover{border-color:var(--gold)}.answer.correct{background:#dff8eb;border-color:#4ec997;color:#0b6748}.answer.wrong{background:#ffe5e7;border-color:#ed7c86;color:#922d38}.feedback{font-weight:800;margin:13px 0 0;min-height:25px}.back{color:#fff;display:inline-flex;font-weight:850;margin-top:6px;text-decoration:none}.footer{color:#426776;font-size:.8rem;padding:4px;text-align:center}
+    @media(max-width:760px){.timeline{grid-template-columns:repeat(2,1fr)}.timeline:before{display:none}.detail{grid-template-columns:1fr}.detail-visual{min-height:150px}.facts,.answers{grid-template-columns:1fr}.era{min-height:140px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <span class="tag">Sejarah Tingkatan 1 • Topik 2.2</span>
+      <h1>Garis Masa Zaman Air Batu</h1>
+      <p>Jelajah empat tahap perubahan bumi—daripada Miosen hingga zaman yang kita diami hari ini.</p>
+    </section>
+    <div class="guide"><span>👆</span><div><strong>Ketuk setiap tahap</strong><small>Lihat tempoh masa, keadaan bumi dan perkembangan kehidupan.</small></div></div>
+    <nav class="timeline" aria-label="Empat tahap Zaman Air Batu">
+      <button class="era active" data-era="0"><span class="icon">🌋</span><strong>Miosen</strong><small>23 juta–5 juta tahun dahulu</small></button>
+      <button class="era" data-era="1"><span class="icon">🐘</span><strong>Pliosen</strong><small>5.3 juta–2.6 juta tahun dahulu</small></button>
+      <button class="era" data-era="2"><span class="icon">🧊</span><strong>Pleistosen</strong><small>2.5 juta–10,000 tahun dahulu</small></button>
+      <button class="era" data-era="3"><span class="icon">🌿</span><strong>Holosen</strong><small>10,000 tahun dahulu–kini</small></button>
+    </nav>
+    <section class="detail" aria-live="polite">
+      <div class="detail-visual"><span id="detailIcon">🌋</span><strong id="detailCue">Bumi berubah</strong></div>
+      <div><span class="period" id="detailPeriod"></span><h2 id="detailTitle"></h2><ul class="facts" id="detailFacts"></ul></div>
+    </section>
+    <section class="check">
+      <h2>Semak pantas</h2>
+      <p>Tahap manakah yang berlangsung dari 10,000 tahun dahulu hingga kini?</p>
+      <div class="answers">
+        <button class="answer" data-correct="false">A. Miosen</button><button class="answer" data-correct="false">B. Pliosen</button>
+        <button class="answer" data-correct="false">C. Pleistosen</button><button class="answer" data-correct="true">D. Holosen</button>
+      </div>
+      <p class="feedback" id="feedback"></p>
+      <a class="back" href="/">← Kembali ke HISTORYVERSE 360</a>
+    </section>
+    <p class="footer">Nota visual untuk pembelajaran dalam kelas dan kendiri • Cikgu Zamzila</p>
+  </main>
+  <script>
+    const eras=[
+      {title:"Miosen",period:"23 juta–5 juta tahun dahulu",icon:"🌋",cue:"Bumi dan gunung terbentuk",facts:["Suhu dunia lebih panas dan kering.","Gunung-ganang mula terbentuk secara fizikal.","Mamalia berkembang dan hidup di daratan.","Tumbuhan rumput semakin meluas."]},
+      {title:"Pliosen",period:"5.3 juta–2.6 juta tahun dahulu",icon:"🐘",cue:"Mamalia berkembang",facts:["Perubahan iklim berterusan menuju keadaan lebih sejuk.","Padang rumput dan savana semakin luas.","Mamalia seperti kuda dan gajah berkembang.","Bentuk muka bumi semakin menyerupai keadaan hari ini."]},
+      {title:"Pleistosen",period:"2.5 juta–10,000 tahun dahulu",icon:"🧊",cue:"Ais meliputi bumi",facts:["Suhu bumi rendah dan kawasan luas dilitupi ais.","Berlaku beberapa kali proses pengglasieran.","Aras laut menurun dan daratan menjadi lebih luas.","Manusia serta haiwan bergerak melalui jambatan darat."]},
+      {title:"Holosen",period:"10,000 tahun dahulu–kini",icon:"🌿",cue:"Dunia masa kini",facts:["Suhu bumi meningkat dan ais mula mencair.","Aras laut meningkat lalu membentuk pulau dan tasik.","Rupa bentuk benua semakin menyerupai keadaan hari ini.","Kehidupan manusia berkembang hingga membentuk tamadun."]}
+    ];
+    const buttons=[...document.querySelectorAll(".era")],title=document.querySelector("#detailTitle"),period=document.querySelector("#detailPeriod"),icon=document.querySelector("#detailIcon"),cue=document.querySelector("#detailCue"),facts=document.querySelector("#detailFacts");
+    function show(i){const e=eras[i];buttons.forEach((b,n)=>b.classList.toggle("active",n===i));title.textContent=e.title;period.textContent=e.period;icon.textContent=e.icon;cue.textContent=e.cue;facts.innerHTML=e.facts.map(f=>"<li>"+f+"</li>").join("")}
+    buttons.forEach(b=>b.addEventListener("click",()=>show(Number(b.dataset.era))));show(0);
+    document.querySelectorAll(".answer").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".answer").forEach(x=>x.disabled=true);const ok=b.dataset.correct==="true";b.classList.add(ok?"correct":"wrong");if(!ok)document.querySelector('[data-correct="true"]').classList.add("correct");document.querySelector("#feedback").textContent=ok?"✅ Tepat! Holosen ialah tahap yang kita diami sekarang.":"❄ Hampir! Jawapan yang tepat ialah Holosen."}));
+  </script>
+</body>
+</html>
