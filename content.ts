@@ -527,6 +527,13 @@ export const formTwoChapters: Chapter[] = [
   {
     number: 10,
     title: "Sarawak dan Sabah",
+    interactiveNotes: [{
+      title: "Ekspedisi Borneo — Misi Bab 10",
+      description: "Belayar dari satu destinasi ke destinasi seterusnya untuk menguasai kepimpinan kesukuan, kepimpinan lembah sungai, kegiatan ekonomi, keunikan masyarakat serta kesenian dan seni bina Sarawak dan Sabah.",
+      href: "https://teacherziela.github.io/misi-borneo/",
+      activities: "5 destinasi • 4 soalan peperiksaan setiap stesen • 3 nyawa • serangan lanun • 5 artifak",
+      cta: "Mulakan Ekspedisi Borneo",
+    }],
     subtopics: ["Sarawak dan Sabah dalam Alam Melayu", "Pemerintahan tempatan", "Kegiatan ekonomi", "Keunikan masyarakat bumiputera"],
     points: [
       "Sarawak dan Sabah merupakan sebahagian Alam Melayu serta mempunyai hubungan dengan kerajaan seperti Brunei dan Sulu.",
