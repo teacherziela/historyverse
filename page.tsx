@@ -16,7 +16,7 @@ const formOneGames: Game[] = [
 ];
 
 const formTwoGames: Game[] = [
-  { title: "Pelayaran Sejarah Bab 10", topic: "Tingkatan 2 • Bab 10", description: "Belayar merentas Sarawak dan Sabah, kuasai pemerintahan tempatan, kegiatan ekonomi serta keunikan masyarakat sambil mempertahankan kapal daripada lanun.", href: "https://game-bab10-sejarah.zam79.chatgpt.site/", icon: "runner" },
+  { title: "Ekspedisi Borneo Bab 10", topic: "Tingkatan 2 • Bab 10", description: "Belayar merentas lima destinasi Sarawak dan Sabah. Jawab 4 soalan peperiksaan di setiap stesen, kumpul artifak dan elakkan tiga tembakan lanun.", href: "https://teacherziela.github.io/misi-borneo/", icon: "runner" },
   { title: "Pendekar Adat Perpatih", topic: "Tingkatan 2 • Bab 9", description: "Lompat halangan, kuasai fakta Adat Perpatih dan hadapi pertarungan akhir.", href: "https://pendekar-adat-perpatih.zam79.chatgpt.site", icon: "sword" },
   { title: "History Tower Defense", topic: "Tingkatan 2 • Kesultanan Melayu", description: "Pertahankan kubu dengan strategi dan jawapan Sejarah yang tepat.", href: "https://history-tower-defense-kesultanan-melayu.zam79.chatgpt.site", icon: "tower" },
   { title: "Misi Empat Kerajaan", topic: "Tingkatan 2 • Bab 8", description: "Selesaikan misi hubungan Kedah, Kelantan, Negeri Sembilan dan Perlis dengan negeri Melayu lain.", href: "https://misi-empat-kerajaan.zam79.chatgpt.site", icon: "runner" },
@@ -505,7 +505,7 @@ const campusPaths: Record<CampusBuilding, CampusPosition[]> = {
 const campusBuildingCopy: Record<CampusBuilding, { title: string; detail: string }> = {
   "tingkatan-1": { title: "Kelas Tingkatan 1", detail: "Bab 1 hingga Bab 8 menanti di dalam kelas." },
   "tingkatan-2": { title: "Balai Ilmu Tingkatan 2", detail: "Bab 1 hingga Bab 10 menanti di dalam balai ilmu." },
-  makmal: { title: "Makmal Game", detail: "Tujuh pengembaraan Sejarah sedia untuk dimainkan." },
+  makmal: { title: "Makmal Game", detail: "Lapan pengembaraan Sejarah sedia untuk dimainkan." },
 };
 
 const clamp = (value: number, minimum: number, maximum: number) => Math.min(maximum, Math.max(minimum, value));
