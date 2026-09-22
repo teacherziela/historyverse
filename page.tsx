@@ -846,14 +846,30 @@ function ClassroomView({ form, chapters, exercises, onBack }: { form: string; ch
   </div>;
 }
 
-function GameLab({ onBack }: { onBack: () => void }) {
+function GameLab({ onBack, teacherMode }: { onBack: () => void; teacherMode: boolean }) {
   return <div className="destination-view lab-view">
     <div className="destination-header lab-header">
       <button type="button" onClick={onBack}><ArrowLeft aria-hidden="true" /> Kembali ke peta</button>
-      <div><span className="eyebrow">Eksperimen ilmu bermula</span><h1>Makmal Game Sejarah</h1><p>Pilih permainan, masuk ke dunia sejarah dan buktikan penguasaan anda.</p></div>
-      <div className="destination-seal"><Gamepad2 aria-hidden="true" /><span>7<small>game</small></span></div>
+      <div><span className="eyebrow">Eksperimen ilmu bermula</span><h1>Makmal Game Sejarah</h1><p>Pilih permainan, buat simulasi peperiksaan dan semak penguasaan anda.</p></div>
+      <div className="destination-seal"><Gamepad2 aria-hidden="true" /><span>9<small>aktiviti</small></span></div>
     </div>
-    <div className="lab-console"><span className="lab-light" aria-hidden="true" /><FlaskConical aria-hidden="true" /><p><strong>Makmal sedia!</strong> Setiap game dibuka dalam portalnya sendiri. Pilih misi di bawah untuk bermain.</p></div>
+    <div className="lab-console"><span className="lab-light" aria-hidden="true" /><FlaskConical aria-hidden="true" /><p><strong>Makmal sedia!</strong> Game dan simulasi dibuka dalam portalnya sendiri. Pilih misi di bawah untuk bermula.</p></div>
+
+    <section className="content-section">
+      <div className="section-heading"><div className="section-icon"><ClipboardCheck /></div><div><span className="eyebrow">Latihan berformat peperiksaan</span><h2>Simulasi Peperiksaan UASA</h2></div></div>
+      <div className="games-grid">
+        <article className="game-card game-1">
+          <div className="game-art" aria-hidden="true"><ClipboardCheck /></div>
+          <div className="game-copy"><span>Tingkatan 1 & 2 • Objektif</span><h3>Simulasi Peperiksaan UASA</h3><p>Jawab 20 soalan pelbagai aras, semak markah serta analisis prestasi mengikut bab.</p><a href="https://teacherziela.github.io/simulasi-peperiksaan/" target="_blank" rel="noreferrer">Mula simulasi <ChevronRight size={18} /></a></div>
+        </article>
+
+        {teacherMode && <article className="game-card game-2">
+          <div className="game-art" aria-hidden="true"><BarChart3 /></div>
+          <div className="game-copy"><span>🔒 Akses Cikgu sahaja</span><h3>Markah & Refleksi Murid</h3><p>Lihat nama, kelas, set, markah, peratus, topik paling mencabar dan refleksi murid daripada simulasi.</p><a href="https://historyverse.hatchable.site/teacher" target="_blank" rel="noreferrer">Buka Dashboard Cikgu <ChevronRight size={18} /></a></div>
+        </article>}
+      </div>
+    </section>
+
     <Tabs defaultValue="game-t1" className="lab-tabs">
       <TabsList><TabsTrigger value="game-t1">Game Tingkatan 1</TabsTrigger><TabsTrigger value="game-t2">Game Tingkatan 2</TabsTrigger></TabsList>
       <TabsContent value="game-t1"><GamesSection games={formOneGames} /></TabsContent>
@@ -899,7 +915,7 @@ export default function HomePage() {
       {destination === "campus" && <CampusMap onEnter={enter} />}
       {destination === "tingkatan-1" && <ClassroomView form="Tingkatan 1" chapters={formOneChapters} exercises={formOnePasakExercises} onBack={() => enter("campus")} />}
       {destination === "tingkatan-2" && <ClassroomView form="Tingkatan 2" chapters={formTwoChapters} exercises={formTwoPasakExercises} onBack={() => enter("campus")} />}
-      {destination === "makmal" && <GameLab onBack={() => enter("campus")} />}
+      {destination === "makmal" && <GameLab onBack={() => enter("campus")} teacherMode={teacherMode} />}
     </div>
     <footer><div><span className="brand-mark small"><GraduationCap /></span><p><strong>HISTORYVERSE 360 • Cikgu Zamzila</strong><br />Jelajah • Bermain • Kuasai Sejarah</p></div><p>18 bab • 90 objektif • 18 KBAT PASAK • 7 game</p></footer>
     <nav className="mobile-nav" aria-label="Navigasi telefon"><button type="button" onClick={() => enter("campus")}><Home /><span>Peta</span></button><button type="button" onClick={() => enter("tingkatan-1")}><BookOpenText /><span>Ting. 1</span></button><button type="button" onClick={() => enter("tingkatan-2")}><GraduationCap /><span>Ting. 2</span></button><button type="button" onClick={() => enter("makmal")}><Gamepad2 /><span>Makmal</span></button><InstallAppButton mobile /><StatisticsDialog mobile teacherMode={teacherMode} onTeacherModeChange={changeTeacherMode} /></nav>
